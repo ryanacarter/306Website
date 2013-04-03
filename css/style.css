@@ -1,0 +1,22 @@
+
+body {
+	background-color: gray;
+	font-family: serif;
+	margin:0;
+}
+
+.banner {
+	margin:0px;
+}
+
+a {
+	margin: 20px 20px 20px 190px;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+#balance {
+	padding: 0px 70px 0 0;
+}
