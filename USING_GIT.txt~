@@ -1,0 +1,25 @@
+HOW TO USE GIT
+
+- Swith to the directory in which the website is located.
+	cd /var/www/306Website
+
+- Use the command to pull any new code that might have been added.
+	git pull https://github.com/ryanacarter/306Website
+
+- if you want to commit to the git account (PLEASE DO THIS AFTER EVERY SESSION TO KEEP GIT UP TO DATE!!!!!!)
+
+	git add .
+	git commit -m "inside of the quotes type the discription of what it is that you changed - very important to keep track of changes and possible bugs "
+	git push origin master
+
+
+that is it! there is nothing else to do!!!!!
+
+PLEASE TRY YOUR BEST TO UPDATE EVERYTIME YOU START AND UPLOAD WHEN YOU FINISH YOUR WORK.
+
+
+thank you,
+
+
+
+Ryan Carter
