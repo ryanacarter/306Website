@@ -1,4 +1,5 @@
 <?php
+	//pull the information from the url
 	$rfid = $_GET[ 'rfid' ];
 	
 	$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
