@@ -33,7 +33,7 @@
   
     <div class="grid_12">
       <?php echo '<h1>Student Name: ' . $firstName . ' ' . $lastName . '</h1>' ?>
-      	<img border="1" src="<?php echo $picture ?>" alt="img: <?php echo $firstName . ' ' . $lastName?>" 		height="230px" width="175px" style=" float:right; border-color:#000000;">
+      	<img border="1" src="<?php echo $picture ?>" alt="img: First Name: <?php echo $firstName . ' Last Name: ' . $lastName?>" 		height="230px" width="175px" style=" float:right; border-color:#000000;">
     </div>
     <div>
        <a href="punch.php?rfid=<?php echo $rfid ?>" class="button">
