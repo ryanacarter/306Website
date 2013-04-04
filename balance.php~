@@ -49,7 +49,10 @@
     </div>
 	<br><br><br><br><br><br>
     <a href="main.php?rfid=<?php echo $rfid ?>" class="button" id="balance">
-      <button type="button" style=" position:relative; width: 360px; height:75px; right:200px; ">Go Back</button>
+      	<button type="button" style=" position:relative; width: 360px; 
+			height:75px; right:200px; ">
+			<img src="img/Go-Back.gif" width="350" height="75px" alt="submit" />
+		</button>
     </a>
     
 </body>

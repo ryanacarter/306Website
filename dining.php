@@ -78,15 +78,16 @@
 	<form action="<?php echo $_SERVER[ 'PHP_SELF' ]; ?>" method="post">
 	<input type = "hidden" name = "rfid" id = "rfid" value = "<?php echo $rfid ?>"><br>
 	Dining Amount: <input type="text" name="amount" id = "amount"><br><br>
-        <input type="submit" value="Submit">
+        <input type="image" src="img/Submit.gif" value="Submit" name = "submit"
+ 			height="75px" weight="50px";>
 	</form>
 	</font>
     </div>
-	<br><br><br><br><br><br>
     <a href="main.php?rfid=<?php echo $rfid ?>" class="button" id="balance">
-      <button type="button" style=" position:relative; width: 360px; height:75px; right:200px; ">Go Back</button>
-    </a>
-    
+      <button type="button" style="border: 0; background: transparent; 
+			position:relative; left: 200px; bottom:85px;">
+		<img src="img/Go-Back.gif" width="350" height="75px" alt="submit" /></button>
+    </a>    
 </body>
 
 </html>

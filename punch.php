@@ -43,13 +43,17 @@
       	</a>
 
 	<a href="doublePunch.php?rfid=<?php echo $rfid ?>" class="button">
-        	<button type="button" style=" position:relative; left:350px; bottom:105px;
-		width: 400px; height:105px; ">DOUBLE PUNCH</button>
+        	<button type="button" style=" border: 0; background: transparent;
+				position:relative; left:350px; bottom:110px;">
+				<img src="img/Dbl-Punch.gif" width="400" height="100" alt="submit" />
+			</button>
        </a>
 
 	<a href = "main.php?rfid=<?php echo $rfid ?>" class ="button">
-		<button type= "button" style = "position:relative; top:100px; right:700px;
-		width: 200px; height: 50px; ">Go Back</button>
+		<button type= "button" style = "border: 0; background: transparent;
+			position:relative; top:100px; right:825px; ">
+			<img src="img/Go-Back.gif" width="200" height="50" alt="submit" />
+		</button>
 	</a>
     </div>
     
