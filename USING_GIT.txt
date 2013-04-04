@@ -22,7 +22,7 @@ HOW TO USE GIT
 
 	git push origin master
 
-
+	git will ask you for your username and then password. Please talk to me if you do not have access to the account so I can give you permissions
 that is it! there is nothing else to do!!!!!
 
 PLEASE TRY YOUR BEST TO UPDATE EVERYTIME YOU START AND UPLOAD WHEN YOU FINISH YOUR WORK.
