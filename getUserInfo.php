@@ -1,18 +1,25 @@
 <?php
-//$q=$_GET["q"];
-$q = 107833556;
+$eid=$_GET["eid"];
+//$q = 107833556;
 
-$con = mysql_connect('localhost', 'root', 'checkout', 'meal_plan');
-if (!$con)
+$db = new mysqli('localhost', 'root', 'checkout', 'meal_plan');
+if (!$db)
   {
   die('Could not connect: ' . mysql_error());
   }
+ 
+$query="SELECT e_id, first_name, last_name, punches, dining, flex FROM user WHERE e_id = $eid";
 
-$sql="SELECT * FROM user WHERE e_id = $q";
+if ($result = $db->query($query)) {
 
-$result = mysql_query($con, $sql);
-
-
+        $finfo = $result->fetch_array();
+       
+        $firstName = $finfo["first_name"];
+        $lastName = $finfo["last_name"];
+       
+    }
+ 
+ 
 echo "<table border='1'>
 <tr>
 <th>e_id</th>
@@ -22,18 +29,19 @@ echo "<table border='1'>
 <th>Dining</th>
 <th>Flex</th>
 </tr>";
-
-$row = $result->fetch_assoc();
+ 
+ 
 echo "<tr>";
-echo "<td>" . $row["e_id"] . "</td>";
-echo "<td>" . $row["first_name"] . "</td>";
-echo "<td>" . $row['last_name'] . "</td>";
-echo "<td>" . $row['punches'] . "</td>";
-echo "<td>" . $row['dining'] . "</td>";
-echo "<td>" . $row['flex'] . "</td>";
+echo "<td>" . $finfo["e_id"] . "</td>";
+echo "<td>" . $finfo["first_name"] . "</td>";
+echo "<td>" . $finfo['last_name'] . "</td>";
+echo "<td>" . $finfo['punches'] . "</td>";
+echo "<td>" . $finfo['dining'] . "</td>";
+echo "<td>" . $finfo['flex'] . "</td>";
 echo "</tr>";
-  
+ 
 echo "</table>";
-
+ 
+ 
 mysql_close($con);
 ?>
