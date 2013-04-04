@@ -1,6 +1,5 @@
 <?php
 $eid=$_GET["eid"];
-//$q = 107833556;
 
 $db = new mysqli('localhost', 'root', 'checkout', 'meal_plan');
 if (!$db)
