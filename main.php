@@ -68,9 +68,9 @@
     </div>
     <div class="grid_3 omega">
       <a href="index.php" class="button" id="balance">
-        <button type="button" style="background-color:#5C005C;color:#FFFFFF;
-	position: relative; width:275px; height:85px; bottom:200px;">
-          QUIT!!!
+        <button type="button" style="border: 0; background: transparent;
+			position: relative; bottom:200px;">
+		<img src="img/Quit.gif" width="275" alt="submit" />
         </button>
       </a>
     </div>

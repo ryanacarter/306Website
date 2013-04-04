@@ -37,9 +37,11 @@
 	    	<br><br><br><br><br><br><br>
 	    </div>
 
-    <a href="main.php?rfid=<?php echo $rfid ?>" class="button" id="balance">
-      <button type="button"> Go Back</button>
-    </a>
+        <a href="main.php?rfid=<?php echo $rfid ?>" class="button" id="balance">
+	      <button type="button" style="border: 0; background: transparent; 
+				position:relative; right:200px;">
+			<img src="img/Go-Back.gif" width="350" height="75px" alt="submit" /></button>
+	    </a>
 
 
  
