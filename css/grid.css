@@ -5,17 +5,13 @@
  Gutter : 20px 
 
  */
-.grid_1 { width: 65px; }
-.grid_2 { width: 150px; }
-.grid_3 { width: 235px; }
-.grid_4 { width: 320px; }
-.grid_5 { width: 405px; }
-.grid_6 { width: 490px; }
-.grid_7 { width: 575px; }
-.grid_8 { width: 660px; }
-.grid_9 { width: 745px; }
-.grid_10 { width: 830px; }
-.grid_11 { width: 915px; }
+.grid_footer { width: 1000px; height: 300px }
+.grid_7_left { width: 300px; height: 100px;}
+.grid_7_right { width: 300px; height: 100px; }
+.grid_8 { width: 600px; height: 100px; }
+.grid_9 { width: 1000px; height: 400px; }
+.grid_10 { width: 800px; height: 100px; }
+.grid_11 { width: 1000px; height: 200px; }
 .grid_12 { width: 1000px; }
 
 .grid_1,
@@ -24,14 +20,36 @@
 .grid_4,
 .grid_5,
 .grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11,
-.grid_12 {
-	margin: 0 20px 10px 0;
+.grid_7_right {
+	float: right;
+}
+.grid_7_left {
 	float: left;
+}
+.grid_8 {
+	padding-left: 195px;
+	padding-right: 200px;
+	margin: auto;
+	display: block;
+}
+.grid_9 {
+	margin: auto;
+	display: block;
+}
+.grid_10 {
+	margin-top: 75px;
+	float: left;
+	display: block;
+	font-size: 35px;
+}
+
+.grid_11 {
+	margin: auto;
+	display: block;
+}
+
+.grid_12 {
+	margin: auto;
 	display: block;
 }
 
