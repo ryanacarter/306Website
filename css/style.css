@@ -9,14 +9,69 @@ body {
 	margin:0px;
 }
 
-a {
-	margin: 20px 20px 20px 190px;
-}
-
 h1 {
 	font-size: 35px;
 }
 
+h2 {
+	font-size: 23px;
+}
+
 #balance {
 	padding: 0px 70px 0 0;
+}
+
+#slidedown1 {
+    width: 600px;
+    height: 125px;
+	margin: auto;
+    background-color: grey;
+}
+#slidedowndining {
+	width: 600px;
+    height: 180px;
+	margin: auto;
+    background-color: grey;
+	text-align: center;
+}
+#slidedownflex {
+	width: 600px;
+    height: 180px;
+	margin: auto;
+    background-color: grey;
+	text-align: center;
+}
+#slidedownbalance {
+	width: 1000px;
+    height: 150px;
+	margin: auto;
+    background-color: grey;
+	text-align: left;
+}
+
+a.hidden_punch_button {
+	padding-right: 280px;
+	padding-bottom: 90px;
+	border-radius: 3px;
+	display: inline-block;
+	margin-top: 10px;
+	background-image: url('../img/Punch.gif');
+	background-size:280px 90px;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 1px 1px 1px #999;
+}
+
+a.hidden_double_button {
+	padding-right: 280px;
+	padding-bottom: 90px;
+	border-radius: 3px;
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+	background-image: url('../img/Dbl-Punch.gif');
+	background-size:280px 90px;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 1px 1px 1px #999;
 }

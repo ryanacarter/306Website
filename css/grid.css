@@ -5,11 +5,13 @@
  Gutter : 20px 
 
  */
-.grid_footer { width: 1000px; height: 300px }
-.grid_7_left { width: 300px; height: 100px;}
-.grid_7_right { width: 300px; height: 100px; }
+.grid_6_left {width: 150px; height:100px; }
+.grid_6_right {width: 150px; height:100px; }
+.grid_6 { width: 600px; height: 100px; }
+.grid_7_left { width: 290px; height: 100px;}
+.grid_7_right { width: 290px; height: 100px; }
 .grid_8 { width: 600px; height: 100px; }
-.grid_9 { width: 1000px; height: 400px; }
+.grid_9 { width: 615px; height: 500px; }
 .grid_10 { width: 800px; height: 100px; }
 .grid_11 { width: 1000px; height: 200px; }
 .grid_12 { width: 1000px; }
@@ -19,7 +21,15 @@
 .grid_3,
 .grid_4,
 .grid_5,
-.grid_6,
+.grid_6 {
+	margin: auto;
+}
+.grid_6_right {
+	float:right;
+}
+.grid_6_left {
+	float:left;
+}
 .grid_7_right {
 	float: right;
 }

@@ -1,0 +1,29 @@
+<?php
+	// we have values, let's try to insert new student into the db
+	// connect
+	$db = new mysqli( 'localhost', 'root', 'root', 'meal_plan' );
+	
+	// extract our values from $_POST
+	extract( $_POST );
+
+	$query = "SELECT dining FROM user WHERE rfid = $rfid";
+
+	if ($result = $db->query($query)) {
+
+		$finfo = $result->fetch_array();
+	
+		$dining = $finfo["dining"];
+	}
+
+	$query1 = "UPDATE user SET dining = dining - $amount WHERE rfid = $rfid";
+
+			
+
+	// deduct the amount
+	if ( $dining > $amount ) {	
+		if ( $db->query( $query1 ) ) {
+			header( "Location: index.php" );
+		}
+	}
+	else
+		header( "Location: noMoreDining.php?rfid=" . $rfid );
