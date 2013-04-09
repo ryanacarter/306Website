@@ -7,24 +7,24 @@
 	// extract our values from $_POST
 	extract( $_POST );
 
-	$query = "SELECT dining FROM user WHERE rfid = $rfid";
+	$query = "SELECT flex FROM user WHERE rfid = $rfid";
 
 	if ($result = $db->query($query)) {
 
 		$finfo = $result->fetch_array();
 	
-		$dining = $finfo["dining"];
+		$flex = $finfo["flex"];
 	}
 
-	$query1 = "UPDATE user SET dining = dining - $amount WHERE rfid = $rfid";
+	$query1 = "UPDATE user SET flex = flex - $amount WHERE rfid = $rfid";
 
 			
 
 	// deduct the amount
-	if ( $dining > $amount ) {	
+	if ( $flex > $amount ) {	
 		if ( $db->query( $query1 ) ) {
 			header( "Location: index.php" );
 		}
 	}
 	else
-		header( "Location: noMoreDining.php?rfid=" . $amount );
+		header( "Location: noMoreDining.php?rfid=" . $rfid );

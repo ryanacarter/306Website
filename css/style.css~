@@ -23,7 +23,7 @@ h2 {
 
 #slidedown1 {
     width: 600px;
-    height: 110px;
+    height: 125px;
 	margin: auto;
     background-color: grey;
 }

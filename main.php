@@ -2,7 +2,7 @@
 	//pull the information from the url
 	$rfid = $_GET[ 'rfid' ];
 	
-	$db = new mysqli ('localhost', 'root', 'root', 'meal_plan');
+	$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
 	$query = "SELECT * FROM user WHERE rfid = $rfid";
 
@@ -87,7 +87,7 @@
 				<a class="hidden_punch_button" href="usepunch.php?rfid= <?php echo $rfid ?>"></a>
 			</div>
 			<div class = "grid_7_right">
-				<a class="hidden_double_button" href="usepunch.php?rfid= <?php echo $rfid ?>"></a>
+				<a class="hidden_double_button" href="doublePunch.php?rfid= <?php echo $rfid ?>"></a>
 			</div>
 		</div>		
 
