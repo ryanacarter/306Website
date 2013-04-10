@@ -1,3 +1,9 @@
+<?php
+
+	setcookie("rfid");
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
