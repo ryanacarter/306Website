@@ -1,17 +1,19 @@
 <?php
-	$rfid = $_GET[ 'rfid' ];
-	
-	$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
-
-	$query = "SELECT first_name, last_name, dining FROM user WHERE rfid = $rfid";
-
-	if ($result = $db->query($query)) {
-
-		$finfo = $result->fetch_array();
+	if($rfid = $_COOKIE['rfid'])
+	{
 		
-		$firstName = $finfo["first_name"];
-		$lastName = $finfo["last_name"];
-		$dining = $finfo["dining"];
+		$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
+
+		$query = "SELECT first_name, last_name, dining FROM user WHERE rfid = $rfid";
+
+		if ($result = $db->query($query)) {
+
+			$finfo = $result->fetch_array();
+		
+			$firstName = $finfo["first_name"];
+			$lastName = $finfo["last_name"];
+			$dining = $finfo["dining"];
+		}
 	}
 ?>
 
@@ -37,7 +39,7 @@
 	    	<br><br><br><br><br><br><br>
 	    </div>
 
-        <a href="main.php?rfid=<?php echo $rfid ?>" class="button" id="balance">
+        <a href="main.php" class="button" id="balance">
 	      <button type="button" style="border: 0; background: transparent; 
 				position:relative; right:200px;">
 			<img src="img/Go-Back.gif" width="350" height="75px" alt="submit" /></button>

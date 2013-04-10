@@ -31,7 +31,11 @@
 	
 	}
 	else
-		header("location: index.php")
+	{
+		setcookie("rfid");
+
+		header("location: index.php");
+	}	
 
 
 ?>

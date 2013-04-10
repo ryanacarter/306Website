@@ -1,24 +1,30 @@
 <?php
 	//pull the information from the url
-	$rfid = $_GET[ 'rfid' ];
+	if($rfid = $_COOKIE['rfid'])
+	{
 	
-	$db = new mysqli ('localhost', 'root', 'root', 'meal_plan');
+		$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
-	$query = "SELECT * FROM user WHERE rfid = $rfid";
+		$query = "SELECT * FROM user WHERE rfid = $rfid";
 
-	if ($result = $db->query($query)) {
+		if ($result = $db->query($query)) {
 
-		$finfo = $result->fetch_array();
+			$finfo = $result->fetch_array();
 		
-		$firstName = $finfo["first_name"];
-		$lastName = $finfo["last_name"];
-		$picture = $finfo["picture_location"];
-		$punches = $finfo["punches"];
-		$dining = $finfo["dining"];
-		$flex = $finfo["flex"];
-	}
+			$firstName = $finfo["first_name"];
+			$lastName = $finfo["last_name"];
+			$picture = $finfo["picture_location"];
+			$punches = $finfo["punches"];
+			$dining = $finfo["dining"];
+			$flex = $finfo["flex"];
+		}
 	
-	setcookie("rfid", $rfid);
+	}
+	else
+	{
+		$firstName = "No Connection";
+	}
+
 ?>
 
 <!DOCTYPE HTML>

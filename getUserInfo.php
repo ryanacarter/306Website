@@ -7,7 +7,7 @@ if (!$db)
   die('Could not connect: ' . mysql_error());
   }
  
-$query="SELECT e_id, first_name, last_name, punches, dining, flex FROM user WHERE e_id = $eid";
+$query="SELECT * FROM user WHERE e_id = $eid";
 
 if ($result = $db->query($query)) {
 
@@ -37,7 +37,7 @@ echo "<td>" . $finfo['last_name'] . "</td>";
 echo "<td>" . $finfo['punches'] . "</td>";
 echo "<td>" . $finfo['dining'] . "</td>";
 echo "<td>" . $finfo['flex'] . "</td>";
-echo "</tr>";
+echo "</tr>" ;
  
 echo "</table>";
  

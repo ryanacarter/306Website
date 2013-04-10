@@ -4,7 +4,7 @@
 	if( $rfid = $_COOKIE['rfid'] )
 	{
 		// Connect to the database
-		$db = new mysqli('localhost', 'root', 'root', 'meal_plan');
+		$db = new mysqli('localhost', 'root', 'checkout', 'meal_plan');
 	
 		$query = "SELECT * FROM user WHERE rfid = $rfid";
 
@@ -20,20 +20,19 @@
 		if ($punches > 0)
 		{
 			$db->query("UPDATE user SET punches = punches - 1 WHERE rfid = $rfid AND punches > 0");
-			$location = "index.php";
+			setcookie("rfid");
+			header("location: index.php");
 		}
 		else
-	 		$location = "noMorePunches.php?rfid=" . $rfid;
-
-	
-		setcookie("rfid");
-	
-
-		header("location: $location");
+			header("location: noMorePunches.php");
+		
 	
 	}
 	else
+	{
+		setcookie("rfid");
 		header("location: index.php");
+	}
 
 
 

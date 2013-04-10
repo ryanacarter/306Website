@@ -27,4 +27,4 @@
 		}
 	}
 	else
-		header( "Location: noMoreDining.php?rfid=" . $amount );
+		header( "Location: noMoreDining.php" );

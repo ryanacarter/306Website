@@ -1,30 +1,30 @@
 <?php
 	//pull the information from the url
-	$rfid = $_GET[ 'rfid' ];
+	if($rfid = $_COOKIE['rfid'])
+	{
 	
-	// Create the connection to the database
-	$db = new mysqli ('localhost', 'root', 'root', 'meal_plan');
-	
-	// Check to make sure the connection occured
-	if ($db->connect_errno) {
-	    die('Connect Error: ' . $mysqli->connect_errno);
-	}
-	
-	// Query Statement for getting information from database
-	$query = "SELECT * FROM user WHERE rfid = $rfid";
-	
-	//get the result, put in array, then set the varriables for user
-	if ($result = $db->query($query)) {
+		$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
-		$finfo = $result->fetch_array();
+		$query = "SELECT * FROM user WHERE rfid = $rfid";
+
+		if ($result = $db->query($query)) {
+
+			$finfo = $result->fetch_array();
 		
-		$firstName = $finfo["first_name"];
-		$lastName = $finfo["last_name"];
-		$picture = $finfo["picture_location"];
-		$punches = $finfo["punches"];
-		$dining = $finfo["dining"];
-		$flex = $finfo["flex"];
+			$firstName = $finfo["first_name"];
+			$lastName = $finfo["last_name"];
+			$picture = $finfo["picture_location"];
+			$punches = $finfo["punches"];
+			$dining = $finfo["dining"];
+			$flex = $finfo["flex"];
+		}
+	
 	}
+	else
+	{
+		$firstName = No Connection;
+	}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -92,10 +92,10 @@
 
 		<div id="slidedown1">
 			<div class = "grid_7_left">
-				<a class="hidden_punch_button" href="usepunch.php" value="<?php echo $rfid?>"></a>
+				<a class="hidden_punch_button" href="usepunch.php"></a>
 			</div>
 			<div class = "grid_7_right">
-				<a class="hidden_double_button" href="doublePunch.php?rfid= <?php echo $rfid ?>"></a>
+				<a class="hidden_double_button" href="doublePunch.php"></a>
 			</div>
 		</div>		
 
@@ -107,7 +107,7 @@
 			<font size = "6">
 			<form action="usedining.php" method="post">
 			<input type = "hidden" name = "rfid" id = "rfid" value = "<?php echo $rfid ?>">
-			Amount: <input type="text" name="dining" id = "dining"><br><br>
+			Amount: <input type="text" name="amount" id = "amount"><br><br>
 			
 		        <input type="image" src="img/Submit.gif" value="Submit" name = "submit"
 		 			height="75px" weight="50px";>
