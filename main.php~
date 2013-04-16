@@ -22,7 +22,7 @@
 	}
 	else
 	{
-		$firstName = No Connection;
+		$firstName = "No Connection";
 	}
 
 ?>

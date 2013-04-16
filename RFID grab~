@@ -1,0 +1,28 @@
+<html>
+
+<?php
+
+$arduinovalue = $_GET['tag'];
+
+echo $arduinovalue
+
+//Connect to database 
+	$db=new mysqli('localhost', 'root', 'checkout', 'meal_plan');
+
+// Check connection
+	if (mysqli_connect_errno())
+ 	 	{
+  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  		}
+
+$result = mysqli_query($db, "SELECT * FROM user WHERE rfid = $arduinovalue");
+
+while($row = mysqli_fetch_array($result))
+  {
+  echo $row['first_name'] . " " . $row['last_name'] . " " . {$row['dining'] . " " . $row['flex'] . " " . $row['punches']  ;
+  echo "<br />";
+  }
+
+mysqli_close ($db)
+?>
+

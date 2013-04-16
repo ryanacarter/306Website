@@ -1,10 +1,3 @@
-<?php
-	
-	$rfid = $_GET[ 'rfid' ];
-	setcookie("rfid", $rfid);
-
-?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,7 +14,7 @@
     </div>
   
     <div class="grid_12">
-      <h1>Waiting for RFID . . .</h1>
+      <a href = "getRFID.php"> Scan </a>
     </div>
 
     <div class="grid_11">
@@ -31,3 +24,4 @@
 </body>
 </html>
   
+
