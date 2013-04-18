@@ -7,7 +7,7 @@
 	// extract our values from $_POST
 	extract( $_POST );
 
-	$query = "SELECT dining FROM user WHERE rfid = $rfid";
+	$query = "SELECT dining FROM user WHERE rfid = \"$rfid\"";
 
 	if ($result = $db->query($query)) {
 

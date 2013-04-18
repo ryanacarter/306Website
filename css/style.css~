@@ -23,7 +23,7 @@ h2 {
 
 #slidedown1 {
     width: 600px;
-    height: 125px;
+    height: 110px;
 	margin: auto;
     background-color: grey;
 }
@@ -72,6 +72,20 @@ a.hidden_double_button {
 	background-image: url('../img/Dbl-Punch.gif');
 	background-size:280px 90px;
 	text-decoration: none;
+	color: #333;
+	text-shadow: 1px 1px 1px #999;
+}
+a.scan {
+	padding-right: 280px;
+	padding-bottom: 90px;
+	border-radius: 3px;
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+	background-size:280px 90px;
+	background-color: white;
+	text-decoration: none;
+	font-size: 25px;
 	color: #333;
 	text-shadow: 1px 1px 1px #999;
 }

@@ -7,7 +7,7 @@ if (!$db)
   die('Could not connect: ' . mysql_error());
   }
  
-$query="SELECT * FROM user WHERE eid = $eid";
+$query="SELECT * FROM user WHERE e_id = $eid";
 
 if ($result = $db->query($query)) {
 
@@ -30,7 +30,7 @@ echo "<table border='1'>
 </tr>";
  
  
-echo "<tr>";
+echo json_encode($finfo "<tr>";
 echo "<td>" . $finfo["e_id"] . "</td>";
 echo "<td>" . $finfo["first_name"] . "</td>";
 echo "<td>" . $finfo['last_name'] . "</td>";
@@ -40,7 +40,8 @@ echo "<td>" . $finfo['flex'] . "</td>";
 echo "</tr>" ;
  
 echo "</table>";
+
+
  
- 
-mysql_close($con);
+
 ?>

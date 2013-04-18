@@ -23,6 +23,7 @@
 	// deduct the amount
 	if ( $dining > $amount ) {	
 		if ( $db->query( $query1 ) ) {
+			setcookie("rfid");
 			header( "Location: index.php" );
 		}
 	}

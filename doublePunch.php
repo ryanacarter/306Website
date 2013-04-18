@@ -7,7 +7,7 @@
 		// Connect to the database
 		$db = new mysqli('localhost', 'root', 'checkout', 'meal_plan');
 	
-		$query = "SELECT * FROM user WHERE rfid = $rfid";
+		$query = "SELECT * FROM user WHERE rfid = \"$rfid\"";
 
 		if ($result = $db->query($query) ) {
 		

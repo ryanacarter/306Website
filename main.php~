@@ -4,7 +4,7 @@
 	{
 	
 		$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
-
+		
 		$query = "SELECT * FROM user WHERE rfid = $rfid";
 
 		if ($result = $db->query($query)) {
@@ -78,7 +78,7 @@
       		<?php echo 'Student Name: ' . $firstName . ' ' . $lastName ?>
 		</div>
       		<img border="1" src="<?php echo $picture ?>" alt="<?php echo $firstName .
-			' ' . $lastName?> "height="200px" width="150px" 
+			' ' . $lastName ?>" height="200px" width="150px" 
 			style=" float:right; border-color:#000000;">
 		</div>
     </div>

@@ -14,7 +14,7 @@
     </div>
   
     <div class="grid_12">
-      <a href = "getRFID.php"> Scan </a>
+      <a class = "scan" href = "getRFID.php"> Scan </a>
     </div>
 
     <div class="grid_11">

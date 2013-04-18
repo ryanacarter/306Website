@@ -40,7 +40,15 @@ echo "<td>" . $finfo['flex'] . "</td>";
 echo "</tr>" ;
  
 echo "</table>";
+
+
  
+$result=array();
+while ($result = $db->query($query)) {
+        $result[]=$finfo;
+}
+
+echo json_encode($result);
  
 mysql_close($con);
 ?>
