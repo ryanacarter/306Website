@@ -48,6 +48,13 @@ h2 {
     background-color: grey;
 	text-align: left;
 }
+#scan {
+	width: 600px;
+    height: 170px;
+	margin: auto;
+    background-color: white;
+	text-align: center;
+}
 
 a.hidden_punch_button {
 	padding-right: 280px;
@@ -85,7 +92,7 @@ a.scan {
 	background-size:280px 90px;
 	background-color: white;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 50px;
 	color: #333;
 	text-shadow: 1px 1px 1px #999;
 }

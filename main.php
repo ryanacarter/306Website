@@ -37,6 +37,30 @@
   	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
   	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script>
+		function validateDiningForm()
+		{
+			var x=document.forms["dining"]["diningAmount"].value;
+
+			if (x==null || x=="")
+  			{
+  				alert("\"Amount\" must have a value");
+  				return false;
+  			}
+			
+		}
+
+		function validateFlexForm()
+		{
+			var x=document.forms["flex"]["flexAmount"].value;
+
+			if (x==null || x=="")
+  			{
+  				alert("\"Amount\" must have a value");
+  				return false;
+  			}
+			
+		}
+
 		$(document).ready(function() {
 			$("#slidedown1").hide();
 			$("#button1").hide();
@@ -48,7 +72,7 @@
 			$(window).load(function() {
 				
 				$("#punch").click(function() {
-		        	$("#slidedown1").slideToggle(400);
+		        		$("#slidedown1").slideToggle(400);
 				});
 		
 				$("#dining").click(function() {
@@ -69,19 +93,21 @@
 <body>
 	<div class="header">
 		<div class="grid_12">
-        	<img  class="banner" src="img/Banner3.gif" alt="DukeServe">
+        		<img  class="banner" src="img/Banner3.gif" alt="DukeServe">
 		</div>
-    </div>
+   	</div>
   
-    <div class="grid_11">
+    	<div class="grid_11">
+
 		<div class="grid_10">
-      		<?php echo 'Student Name: ' . $firstName . ' ' . $lastName ?>
+      			<?php echo 'Student Name: ' . $firstName . ' ' . $lastName ?>
 		</div>
-      		<img border="1" src="<?php echo $picture ?>" alt="<?php echo $firstName .
-			' ' . $lastName ?>" height="200px" width="150px" 
-			style=" float:right; border-color:#000000;">
-		</div>
-    </div>
+      		
+		<img border="1" src="<?php echo $picture ?>" alt="<?php echo $firstName .
+		' ' . $lastName ?>" height="200px" width="150px" 
+		style=" float:right; border-color:#000000;">
+
+    	</div>
 
 
     <div class="grid_9">
@@ -105,9 +131,9 @@
         </button>
 		<div id="slidedowndining">
 			<font size = "6">
-			<form action="usedining.php" method="post">
+			<form name="dining" action="usedining.php" method="post" onsubmit="return validateDiningForm()" >
 			<input type = "hidden" name = "rfid" id = "rfid" value = "<?php echo $rfid ?>">
-			Amount: <input type="text" name="amount" id = "amount"><br><br>
+			Amount: <input type="text" name="diningAmount" id = "amount"><br><br>
 			
 		        <input type="image" src="img/Submit.gif" value="Submit" name = "submit"
 		 			height="75px" weight="50px";>
@@ -120,9 +146,9 @@
         </button>
 		<div id="slidedownflex">
 			<font size = "6">
-			<form action="useflex.php" method="post">
+			<form name="flex" action="useflex.php" method="post" onsubmit="return validateFlexForm()" >
 			<input type = "hidden" name = "rfid" id = "rfid" value = "<?php echo $rfid ?>">
-			Amount: <input type="text" name="amount" id = "amount"><br><br>			
+			Amount: <input type="text" name="flexAmount" id = "amount"><br><br>			
 		        <input type="image" src="img/Submit.gif" value="Submit" name = "submit"
 		 			height="75px" weight="50px";>
 			</form>
@@ -139,6 +165,7 @@
 				<a href="index.php">
 					<button type = "button" style="border: 0; background: transparent; float: right; float:top;">
 						<img src="img/Quit.gif" width="275" alt="submit" />
+					</button>
       				</a>
 			</div>
 		</div>

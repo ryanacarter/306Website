@@ -16,12 +16,12 @@
 		$dining = $finfo["dining"];
 	}
 
-	$query1 = "UPDATE user SET dining = dining - $amount WHERE rfid = $rfid";
+	$query1 = "UPDATE user SET dining = dining - $diningAmount WHERE rfid = \"$rfid\"";
 
 			
 
 	// deduct the amount
-	if ( $dining > $amount ) {	
+	if ( $dining >= $diningAmount ) {	
 		if ( $db->query( $query1 ) ) {
 			setcookie("rfid");
 			header( "Location: index.php" );

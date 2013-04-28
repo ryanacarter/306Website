@@ -16,12 +16,12 @@
 		$flex = $finfo["flex"];
 	}
 
-	$query1 = "UPDATE user SET flex = flex - $amount WHERE rfid = $rfid";
+	$query1 = "UPDATE user SET flex = flex - $flexAmount WHERE rfid = \"$rfid\"";
 
 			
 
 	// deduct the amount
-	if ( $flex > $amount ) {	
+	if ( $flex >= $flexAmount ) {	
 		if ( $db->query( $query1 ) ) {
 			setcookie("rfid");
 			header( "Location: index.php" );

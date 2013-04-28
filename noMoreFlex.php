@@ -3,7 +3,7 @@
 	{
 		$db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
-		$query = "SELECT first_name, last_name, flex FROM user WHERE rfid = $rfid";
+		$query = "SELECT first_name, last_name, flex FROM user WHERE rfid = \"$rfid\"";
 
 		if ($result = $db->query($query)) {
 

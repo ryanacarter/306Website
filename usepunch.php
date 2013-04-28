@@ -19,7 +19,7 @@
 
 		if ($punches > 0)
 		{
-			$db->query("UPDATE user SET punches = punches - 1 WHERE rfid = $rfid AND punches > 0");
+			$db->query("UPDATE user SET punches = punches - 1 WHERE rfid = \"$rfid\" AND punches > 0");
 			setcookie("rfid");
 			header("location: index.php");
 		}
