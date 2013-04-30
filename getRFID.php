@@ -1,5 +1,5 @@
 <?php
-	
+
 $db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
 $query = "SELECT * FROM arduinoConnection";
@@ -22,6 +22,8 @@ while(!$quitLoop)
 }
 
 $quitLoop = false;
+$counter = 15;
+$rfid = "";
 
 while(!$quitLoop)
 {
@@ -40,9 +42,29 @@ while(!$quitLoop)
 		}
 			
 	}
-
+	
+	if (!quitLoop )
+	{
+		if ($counter < 0)
+			$quitLoop = true;
+	}
+		
+	sleep(.5);
+	$counter = $counter - 1;
+		
 }
 
-header("Location: main.php");
+if ($cmp = strcmp($_COOKIE['rfid']."", "") );
+
+echo $cmp;
+
+if ( $cmp > 0 )
+{
+	header("Location: index.php");
+}
+else
+{
+	header("Location: main.php");
+}
 
 ?>

@@ -5,6 +5,7 @@
  Gutter : 20px 
 
  */
+.grid_5 {width: 295px; height:80px;}
 .grid_6_left {width: 150px; height:100px; }
 .grid_6_right {width: 150px; height:100px; }
 .grid_6 { width: 600px; height: 100px; }
@@ -20,7 +21,11 @@
 .grid_2,
 .grid_3,
 .grid_4,
-.grid_5,
+.grid_5 {
+	margin:auto;
+	display: block;
+	padding-top: 10px;
+}
 .grid_6 {
 	margin: auto;
 }
