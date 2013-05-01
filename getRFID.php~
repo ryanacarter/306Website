@@ -1,7 +1,9 @@
 <?php
 
+// make sure that the cookie has been reset
 setcookie("rfid");
 
+// create a connection to the database
 $db = new mysqli ('localhost', 'root', 'checkout', 'meal_plan');
 
 $query = "SELECT * FROM arduinoConnection";

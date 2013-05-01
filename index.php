@@ -87,7 +87,7 @@
   		<a href="getRFID.php">
 			<button id = "scanButton" type = "button" style="border: 0; 
 				background: transparent; float: center; float:top;">
-				<img src="img/Quit.gif" width="275" alt="submit" />
+				<img src="img/Scan_12.gif" width="275" alt="submit" />
 			</button>
   		</a>
 	</div> 
@@ -99,7 +99,7 @@
 	<div class="grid_5">
 		<button id = "enterRFID" type = "button" style="border: 0; 
 			background: transparent; float: center; float:top;">
-			<img src="img/Quit.gif" width="275" alt="submit" />
+			<img src="img/scan.gif" width="275" alt="submit" />
 		</button>
 	</div>
 	<!-- RFID is a hidden div holding the form for manual EID input -->
