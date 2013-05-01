@@ -13,7 +13,7 @@ $rfid = "";
 $db->query("TRUNCATE TABLE arduinoConnection;");
 
 
-while($counter < 10 && !$quitLoop == true)
+while($counter < 5 && !$quitLoop == true)
 {
 	if( $result = $db->query($query) )
 	{

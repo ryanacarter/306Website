@@ -30,7 +30,7 @@ echo "<table border='1'>
 </tr>";
  
  
-echo json_encode($finfo "<tr>";
+echo "<tr>";
 echo "<td>" . $finfo["e_id"] . "</td>";
 echo "<td>" . $finfo["first_name"] . "</td>";
 echo "<td>" . $finfo['last_name'] . "</td>";
@@ -43,5 +43,12 @@ echo "</table>";
 
 
  
+$result=array();
+while ($result = $db->query($query)) {
+        $result[]=$finfo;
+}
 
+echo json_encode($result);
+ 
+mysql_close($con);
 ?>

@@ -1,3 +1,26 @@
+<?php
+
+	$err = $_GET["error"];
+
+	if ($err == 1)
+	{
+		?>
+			<script>
+				alert("Failed to read in the RFID Tag");
+			</script>
+		<?php
+	}
+	else if ($err == 2)
+	{
+		?>
+			<script>
+				alert("EID Does not Exist");
+			</script>
+		<?php
+	}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -81,10 +104,8 @@
 	</div>
 	<!-- RFID is a hidden div holding the form for manual EID input -->
 	<div id = "rfid">
-		<form name="setRFID" action="setCookie.rfid" method="post" >
-		<input type = "hidden" name = "rfid" id = "rfid" value = "<?php echo $rfid ?>">
-		EID: <input type="text" name="EID" id = "EID"><br><br>
-		
+		<form name="setRFID" action="setCookie.php" method="post" >
+		EID: <input type="text" name="eid" id = "eid"><br><br>
 	        <input type="image" src="img/Submit.gif" value="Submit" name = "submit"
 	 			height="50px" weight="30px";>
 		</form>
